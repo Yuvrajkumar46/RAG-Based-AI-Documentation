@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# Data directories (auto-generated at runtime)
+uploads/
+logs/
+vector_store/faiss_index.index
+vector_store/metadata.json
+vector_store/documents.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model cache (downloaded at runtime)
+.cache/
+sentence_transformers/
