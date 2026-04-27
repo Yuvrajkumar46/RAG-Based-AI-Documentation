@@ -42,18 +42,29 @@ Upload documents and ask natural language questions to get **context-aware answe
 
 ## 📂 Project Structure
 
-
-rag_api/
-├── main.py # FastAPI entry point 
-├── routes/ # API endpoints (upload, query, health) 
-├── services/ # Core RAG logic (embedding, LLM, query pipeline) 
-├── utils/ # Helpers (chunking, extraction, config) 
-├── vector_store/ # FAISS index and metadata 
-├── models/ # Pydantic schemas 
-├── front.html # Simple frontend UI 
-├── requirements.txt 
-├── .gitignore 
-└── README.md 
+    .
+    ├── main.py                # FastAPI entry point
+    ├── routes/                # API endpoints (upload, query, health)
+    │   ├── upload.py
+    │   ├── query.py
+    │   └── health.py
+    ├── services/              # Core RAG logic
+    │   ├── embedding_service.py
+    │   ├── llm_service.py
+    │   └── query_service.py
+    ├── utils/                 # Helper functions
+    │   ├── text_extractor.py
+    │   ├── chunking.py
+    │   └── config.py
+    ├── vector_store/          # FAISS index & metadata
+    │   ├── faiss_index
+    │   └── metadata.json
+    ├── models/                # Data schemas (Pydantic)
+    │   └── request_models.py
+    ├── front.html             # Frontend UI
+    ├── requirements.txt
+    ├── .gitignore
+    └── README.md
 
 
 ---
