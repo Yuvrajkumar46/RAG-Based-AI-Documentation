@@ -44,60 +44,77 @@ Upload documents and ask natural language questions to get **context-aware answe
 
 
 rag_api/
-│── main.py
-│── routes/
-│── services/
-│── utils/
-│── vector_store/
-│── models/
-│── front.html
-│── requirements.txt
+├── main.py # FastAPI entry point
+├── routes/ # API endpoints (upload, query, health)
+├── services/ # Core RAG logic (embedding, LLM, query pipeline)
+├── utils/ # Helpers (chunking, extraction, config)
+├── vector_store/ # FAISS index and metadata
+├── models/ # Pydantic schemas
+├── front.html # Simple frontend UI
+├── requirements.txt
+├── .gitignore
+└── README.md
 
 
 ---
-
 ## ⚙️ Setup Instructions
 
-### 1. Clone the repository
-
-```bash
 git clone https://github.com/Yuvrajkumar46/RAG-Based-AI-Documentation.git
 cd RAG-Based-AI-Documentation
-2. Create virtual environment
+
+Create virtual environment:
 python -m venv venv
 venv\Scripts\activate   # Windows
-3. Install dependencies
+
+Install dependencies:
 pip install -r requirements.txt
-4. Configure environment variables
+
+Configure environment variables:
 
 Create a .env file and add:
-
 GROQ_API_KEY=your_api_key_here
 LLM_MODEL=llama3-70b-8192
-5. Run the server
+
+Run the server:
 uvicorn main:app --reload
-6. Access the application
+
+Access the application:
 API Docs: http://localhost:8000/docs
 Frontend: Open front.html
+
+
 📊 Example Use Case
-Upload a resume → Ask: “What skills are mentioned?”
-Upload research paper → Ask: “Summarize the findings”
-Upload job description → Ask: “Required technologies?”
+
+Upload a resume → Ask: "What skills are mentioned?"
+Upload research paper → Ask: "Summarize the findings"
+Upload job description → Ask: "Required technologies?"
+
+
 ⚠️ Limitations
+
 LLM depends on external API (Groq)
 Retrieval quality depends on chunking
 May fail on very complex documents
+
+
 🚀 Future Improvements
+
 Chat history (conversation memory)
 Better UI (ChatGPT-style interface)
 Streaming responses
 Multi-document filtering
 Deployment (Render / Railway)
+
+
 🎯 Key Learning
+
 Implemented end-to-end RAG pipeline
 Improved LLM accuracy using retrieval
 Reduced hallucination with contextual grounding
 Built scalable API using FastAPI
+
+
 📌 Author
 
+Yuvraj Kumar Jaiswal
 Yuvraj Kumar Jaiswal
