@@ -57,64 +57,88 @@ rag_api/
 
 
 ---
+
+---
+
 ## ⚙️ Setup Instructions
 
-git clone https://github.com/Yuvrajkumar46/RAG-Based-AI-Documentation.git
-cd RAG-Based-AI-Documentation
+### 1. Clone the repository
 
-Create virtual environment:
-python -m venv venv
-venv\Scripts\activate   # Windows
+git clone https://github.com/Yuvrajkumar46/RAG-Based-AI-Documentation.git  
+cd RAG-Based-AI-Documentation  
 
-Install dependencies:
-pip install -r requirements.txt
+---
 
-Configure environment variables:
+### 2. Create virtual environment
 
-Create a .env file and add:
-GROQ_API_KEY=your_api_key_here
-LLM_MODEL=llama3-70b-8192
+python -m venv venv  
+venv\Scripts\activate   # Windows  
 
-Run the server:
-uvicorn main:app --reload
+---
 
-Access the application:
-API Docs: http://localhost:8000/docs
-Frontend: Open front.html
+### 3. Install dependencies
 
+pip install -r requirements.txt  
 
-📊 Example Use Case
+---
 
-Upload a resume → Ask: "What skills are mentioned?"
-Upload research paper → Ask: "Summarize the findings"
-Upload job description → Ask: "Required technologies?"
+### 4. Configure environment variables
 
+Create a `.env` file and add:
 
-⚠️ Limitations
+GROQ_API_KEY=your_api_key_here  
+LLM_MODEL=llama3-70b-8192  
 
-LLM depends on external API (Groq)
-Retrieval quality depends on chunking
-May fail on very complex documents
+---
 
+### 5. Run the server
 
-🚀 Future Improvements
+uvicorn main:app --reload  
 
-Chat history (conversation memory)
-Better UI (ChatGPT-style interface)
-Streaming responses
-Multi-document filtering
-Deployment (Render / Railway)
+---
 
+### 6. Access the application
 
-🎯 Key Learning
+API Docs: http://localhost:8000/docs  
+Frontend: Open `front.html`  
 
-Implemented end-to-end RAG pipeline
-Improved LLM accuracy using retrieval
-Reduced hallucination with contextual grounding
-Built scalable API using FastAPI
+---
 
+## 📊 Example Use Case
 
-📌 Author
+- Upload a resume → Ask: *"What skills are mentioned?"*  
+- Upload research paper → Ask: *"Summarize the findings"*  
+- Upload job description → Ask: *"Required technologies?"*  
 
-Yuvraj Kumar Jaiswal
-Yuvraj Kumar Jaiswal
+---
+
+## ⚠️ Limitations
+
+- Depends on external LLM API (Groq)  
+- Retrieval quality depends on chunking strategy  
+- May struggle with very complex or noisy documents  
+
+---
+
+## 🚀 Future Improvements
+
+- Add chat history (conversation memory)  
+- Improve UI (ChatGPT-style interface)  
+- Enable streaming responses  
+- Multi-document filtering  
+- Deploy application (Render / Railway)  
+
+---
+
+## 🎯 Key Learning
+
+- Built end-to-end RAG pipeline  
+- Improved LLM accuracy using retrieval  
+- Reduced hallucination via contextual grounding  
+- Developed scalable backend using FastAPI  
+
+---
+
+## 📌 Author
+
+**Yuvraj Kumar Jaiswal**
