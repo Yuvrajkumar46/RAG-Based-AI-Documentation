@@ -44,16 +44,16 @@ Upload documents and ask natural language questions to get **context-aware answe
 
 
 rag_api/
-├── main.py # FastAPI entry point
-├── routes/ # API endpoints (upload, query, health)
-├── services/ # Core RAG logic (embedding, LLM, query pipeline)
-├── utils/ # Helpers (chunking, extraction, config)
-├── vector_store/ # FAISS index and metadata
-├── models/ # Pydantic schemas
-├── front.html # Simple frontend UI
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── main.py # FastAPI entry point 
+├── routes/ # API endpoints (upload, query, health) 
+├── services/ # Core RAG logic (embedding, LLM, query pipeline) 
+├── utils/ # Helpers (chunking, extraction, config) 
+├── vector_store/ # FAISS index and metadata 
+├── models/ # Pydantic schemas 
+├── front.html # Simple frontend UI 
+├── requirements.txt 
+├── .gitignore 
+└── README.md 
 
 
 ---
